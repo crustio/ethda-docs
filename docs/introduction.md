@@ -5,9 +5,7 @@ slug: /
 hide_table_of_contents: false
 ---
 
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
-EthDA is an Ethereum ZK L2 with native EIP-4844 blob-carrying transactions (Blob TX) support. This seamless interface makes EthDA a perfect fit for Alt-DA for Ethereum L2s and dStorage solution for EVM DApps.
+EthDA is an Ethereum ZK L2 with native [EIP-4844](https://www.eip4844.com) blob-carrying transactions (Blob TX) support. This seamless interface makes EthDA a perfect fit for Alt-DA for Ethereum L2s and dStorage solution for EVM DApps.
 
 There are various Ethereum scaling solutions like sidechains, rollups, plasma and validium, etc, with different characteristics and trade-offs between security, decentralization, and throughput, etc. One of the most essential differences is Data Availability. Using Ethereum L1 as DA derives security from Ethereum and that's the reason why rollups are widely regarded as the only trustless scaling solution in the medium and long term. But posting L2 transaction data to L1 requires high gas consumption and may cause congestion on L1. This situation becomes even worse as L2 ecosystem prospers.
 

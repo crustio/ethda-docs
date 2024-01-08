@@ -30,18 +30,31 @@ const sidebars = {
    */
   mySidebar: [
     {
-       type: 'category',
-       label: 'Overview',
-       collapsed: false,
-       items: [
-        {
-          type: 'doc',
-          id: 'overview/introduction',
-          label: 'Introduction'
-        }
-      ]
+      type: 'html',
+      value: 'OVERVIEW',
+      className: 'sidebar-title-first',
     },
-    
+    {
+      type: 'doc',
+      id: 'introduction',
+      label: 'Introduction'
+     },
+     {
+      type: 'doc',
+      id: 'dataflow',
+      label: 'Data Flow'
+     },
+     {
+      type: 'doc',
+      id: 'technologies',
+      label: 'Technologies'
+     },
+     {
+      type: 'html',
+      value: 'RESOURCES',
+      className: 'sidebar-title',
+    },
+
    ]
 };
 
