@@ -4,7 +4,7 @@ title: ''
 hide_table_of_contents: false
 ---
 
-import Image from '@theme/IdealImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Blob Transactions
 
@@ -52,7 +52,9 @@ Similar to L1, sequencers are randomly shuffled and split into N subnets. Each B
 Sequencer node, however, does not need to store the whole Blob assigned to the subnet it belongs to. Instead, a Blob is split into multiple slices and sequencers will randomly sample each other to make sure the Blob is stored by the whole subnet.
 The whole subnet architecture is a grid structure of N horizontal subnets and M vertical subnets.
 
-<Image img={require('/img/overview/technologies/das.png')} />
+<div style={{textAlign: 'center'}}>
+  <img src={useBaseUrl('/img/overview/technologies/das.png')} style={{width: 560}} />
+</div>
 
 ## Blobweave
 
@@ -60,4 +62,6 @@ There is a soft consensus mechanism among EthDA's sequencer network to produce L
 
 Basically, the sequencer network maintains the L2 block hash list, a list of the hashes of all previous L2 blocks. The L2 block hash is calculated based on transaction data bundled into the block, including the carried Blobs. Moreover, a historical block with Blob TX is randomly selected to be the recall block. Transactions of the recall block are hashed alongside to generate the new block hash, thus forming a weave of blobs which we call Blobweave.
 
-<Image img={require('/img/overview/technologies/blobweave.png')} />
+<div style={{textAlign: 'center'}}>
+  <img src={useBaseUrl('/img/overview/technologies/blobweave.png')} style={{width: 560}} />
+</div>

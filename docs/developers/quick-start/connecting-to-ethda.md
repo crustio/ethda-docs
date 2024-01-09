@@ -4,8 +4,6 @@ title: ''
 hide_table_of_contents: false
 ---
 
-import Image from '@theme/IdealImage';
-
 ## Devnet
 
 - Network name: EthDA Devnet
