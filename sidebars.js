@@ -36,25 +36,95 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'introduction',
+      id: 'overview/introduction',
       label: 'Introduction'
-     },
-     {
+    },
+    {
       type: 'doc',
-      id: 'dataflow',
+      id: 'overview/data-flow',
       label: 'Data Flow'
-     },
-     {
+    },
+    {
       type: 'doc',
-      id: 'technologies',
+      id: 'overview/technologies',
       label: 'Technologies'
-     },
-     {
+    },
+    {
       type: 'html',
       value: 'RESOURCES',
       className: 'sidebar-title',
     },
-
+    {
+      type: 'doc',
+      id: 'resources/ethda-contracts',
+      label: 'EthDA Contracts'
+    },
+    {
+      type: 'category',
+      label: 'Network Configuration',
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'resources/network-configuration/install-metamask',
+          label: 'Install MetaMask'
+        },
+        {
+          type: 'doc',
+          id: 'resources/network-configuration/add-ethda-network',
+          label: 'Add EthDA Network'
+        }
+      ]
+    },
+    {
+      type: 'doc',
+      id: 'resources/repositories',
+      label: 'Repositories'
+    },
+    {
+      type: 'doc',
+      id: 'resources/eips',
+      label: 'EIPS'
+    },
+    {
+      type: 'html',
+      value: 'DEVELOPERS',
+      className: 'sidebar-title',
+    },
+    {
+      type: 'category',
+      label: 'Quick Start',
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'developers/quick-start/connecting-to-ethda',
+          label: 'Connecting to EthDA'
+        },
+        {
+          type: 'doc',
+          id: 'developers/quick-start/using-ethda-faucet',
+          label: 'Using EthDA Faucet'
+        }
+      ]
+    },
+    {
+      type: 'category',
+      label: 'How To',
+      collapsed: false,
+      items: [
+        {
+          type: 'doc',
+          id: 'developers/how-to/using-ethda-as-altda',
+          label: 'L2 - Use EthDA as Alt-DA'
+        },
+        {
+          type: 'doc',
+          id: 'developers/how-to/using-ethda-as-dstorage',
+          label: 'DApp - Use EthDA as dStorage'
+        }
+      ]
+    },  
    ]
 };
 
