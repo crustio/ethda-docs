@@ -78,13 +78,18 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'resources/eips',
+      label: 'EIPS'
+    },
+    {
+      type: 'doc',
       id: 'resources/repositories',
       label: 'Repositories'
     },
     {
       type: 'doc',
-      id: 'resources/eips',
-      label: 'EIPS'
+      id: 'resources/official-links',
+      label: 'Official Links'
     },
     {
       type: 'html',
