@@ -110,6 +110,11 @@ const sidebars = {
           type: 'doc',
           id: 'developers/quick-start/using-ethda-faucet',
           label: 'Using EthDA Faucet'
+        },
+        {
+          type: 'doc',
+          id: 'developers/quick-start/bridging-assets-to-ethda',
+          label: 'Briding Assets to EthDA'
         }
       ]
     },
