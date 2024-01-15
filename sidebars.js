@@ -64,10 +64,15 @@ const sidebars = {
       label: 'Network Configuration',
       collapsed: false,
       items: [
+        // {
+        //   type: 'doc',
+        //   id: 'resources/network-configuration/install-metamask',
+        //   label: 'Install MetaMask'
+        // },
         {
           type: 'doc',
-          id: 'resources/network-configuration/install-metamask',
-          label: 'Install MetaMask'
+          id: 'resources/network-configuration/install-coinbase-wallet',
+          label: 'Install Coinbase Wallet'
         },
         {
           type: 'doc',
