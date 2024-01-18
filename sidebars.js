@@ -41,8 +41,8 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'overview/data-flow',
-      label: 'Data Flow'
+      id: 'overview/blobsphere',
+      label: 'Blobsphere'
     },
     {
       type: 'doc',
@@ -119,7 +119,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'developers/quick-start/bridging-assets-to-ethda',
-          label: 'Briding Assets to EthDA'
+          label: 'Bridging Assets to EthDA'
         }
       ]
     },
