@@ -116,11 +116,11 @@ const sidebars = {
           id: 'developers/quick-start/using-ethda-faucet',
           label: 'Using EthDA Faucet'
         },
-        {
-          type: 'doc',
-          id: 'developers/quick-start/bridging-assets-to-ethda',
-          label: 'Bridging Assets to EthDA'
-        }
+        // {
+        //   type: 'doc',
+        //   id: 'developers/quick-start/bridging-assets-to-ethda',
+        //   label: 'Bridging Assets to EthDA'
+        // }
       ]
     },
     {
@@ -128,11 +128,11 @@ const sidebars = {
       label: 'How To',
       collapsed: false,
       items: [
-        {
-          type: 'doc',
-          id: 'developers/how-to/using-ethda-as-altda',
-          label: 'L2 - Use EthDA as Alt-DA'
-        },
+        // {
+        //   type: 'doc',
+        //   id: 'developers/how-to/using-ethda-as-altda',
+        //   label: 'L2 - Use EthDA as Alt-DA'
+        // },
         {
           type: 'doc',
           id: 'developers/how-to/using-ethda-as-dstorage',

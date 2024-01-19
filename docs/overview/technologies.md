@@ -28,7 +28,7 @@ Blob Transaction (Blob TX) is the so-called DA Interface that rollups are suppos
 }
 ```
 
-Where blobs is an encoded polynomial per [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) specification, kzgCommitments is the KZG commitment of blobs, kzgProofs is the KZG proof that is used to verify against the commitment, and blobVersionedHashes is used as references to Blobs in Ethereum execution layer to ensure forward compatibility with future changes.
+Where `blobs` is an encoded polynomial per [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) specification, `kzgCommitments` is the KZG commitment of blobs, `kzgProofs` is the KZG proof that is used to verify against the commitment, and `blobVersionedHashes` is used as references to Blobs in Ethereum execution layer to ensure forward compatibility with future changes.
 
 Blob TX support is crucial to enable rollups to seamlessly switch their DA layer between L1 and EthDA.
 
@@ -43,20 +43,20 @@ EthDA does not introduce any new EVM RPC interfaces. Instead, we extend existing
 
 ## Data Availability Sampling (DAS)
 
-So, how are Blobs stored on EthDA? EthDA employs a set of decentralized sequencers, and uses DAS scheme to ensure Blob sharding and storage.
+So, how are Blobs stored on EthDA? EthDA employs a set of *decentralized Data Availability Nodes*, and uses DAS scheme to ensure Blob sharding and storage.
 
 DAS on EthDA is an extended implementation of DAS on Ethereum beacon layer. In addition to that, EthDA is able to support permanent Blob storage instead of a short period of storage like 4 weeks.
 
-Similar to L1, sequencers are randomly shuffled and split into N subnets. Each Blob is published to a subnet based on their index, and that subnet will be responsible for storing the Blob and ensuring its availability as a whole.
+Similar to L1, DA nodes are randomly shuffled and split into N subnets. Each Blob is published to a subnet based on their index, and that subnet will be responsible for storing the Blob and ensuring its availability as a whole.
 
-Sequencer node, however, does not need to store the whole Blob assigned to the subnet it belongs to. Instead, a Blob is split into multiple slices and sequencers will randomly sample each other to make sure the Blob is stored by the whole subnet.
+DA node, however, does not need to store the whole Blob assigned to the subnet it belongs to. Instead, a Blob is split into multiple slices and DA nodes will randomly sample each other to make sure the Blob is stored by the whole subnet.
 The whole subnet architecture is a grid structure of N horizontal subnets and M vertical subnets.
 
 <div style={{textAlign: 'center'}}>
   <img src={useBaseUrl('/img/overview/technologies/das.png')} style={{width: 560}} />
 </div>
 
-## Blobweave
+<!-- ## Blobweave
 
 There is a soft consensus mechanism among EthDA's sequencer network to produce L2 blocks (aka transaction bundles, or sequences) and submit ZK proofs to L1. To support Blob permanent storage by the sequencer network, EthDA uses a scheme called Blobweave similar to Arweave's Blockweave.
 
@@ -64,4 +64,4 @@ Basically, the sequencer network maintains the L2 block hash list, a list of the
 
 <div style={{textAlign: 'center'}}>
   <img src={useBaseUrl('/img/overview/technologies/blobweave.png')} style={{width: 560}} />
-</div>
+</div> -->
