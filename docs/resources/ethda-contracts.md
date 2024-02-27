@@ -6,10 +6,10 @@ hide_table_of_contents: false
 
 ## Devnet
 
-- CDKValidium: [0x38f83C62BE0BB7D7337E0e4d58f2A1F66F0C69D9](https://goerli.etherscan.io/address/0x38f83C62BE0BB7D7337E0e4d58f2A1F66F0C69D9)
+- CDKValidium: [0x6af6A2F1ed424097b29609CC0dD12e4812155295](https://sepolia.etherscan.io/address/0x6af6A2F1ed424097b29609CC0dD12e4812155295)
 
-- PolygonZkEVMBridge: [0x20749f9ddc416306eA6836609D13754D372b5bc7](https://goerli.etherscan.io/address/0x20749f9ddc416306eA6836609D13754D372b5bc7)
+- PolygonZkEVMBridge: [0x1d981B754EF5daA27AB0Be566a3F052c3E020186](https://sepolia.etherscan.io/address/0x1d981B754EF5daA27AB0Be566a3F052c3E020186)
 
-- PolygonZkEVMGlobalExitRoot: [0x7A054897662806990061c14236B4B9a9227e8783](https://goerli.etherscan.io/address/0x7A054897662806990061c14236B4B9a9227e8783)
+- PolygonZkEVMGlobalExitRoot: [0x54af4E46E26feAb73f9089583fF4D79a31C243eC](https://sepolia.etherscan.io/address/0x54af4E46E26feAb73f9089583fF4D79a31C243eC)
 
-- CDKDataCommittee: [0xFce6458993c81F1404835a3f385E41bB50009Dfc](https://goerli.etherscan.io/address/0xFce6458993c81F1404835a3f385E41bB50009Dfc)
+- CDKDataCommittee: [0xf35Cd7211737792D14BC6D2A992714C71C21C6D3](https://sepolia.etherscan.io/address/0xf35Cd7211737792D14BC6D2A992714C71C21C6D3)

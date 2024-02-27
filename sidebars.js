@@ -41,13 +41,13 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'overview/blobsphere',
-      label: 'Blobsphere'
+      id: 'overview/technologies',
+      label: 'Technologies'
     },
     {
       type: 'doc',
-      id: 'overview/technologies',
-      label: 'Technologies'
+      id: 'overview/blobsphere',
+      label: 'Blobsphere'
     },
     {
       type: 'html',
