@@ -46,9 +46,58 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'overview/blobsphere',
-      label: 'Blobsphere'
+      id: 'overview/da',
+      label: 'DA Network'
     },
+    {
+      type: 'html',
+      value: 'DEVELOPERS',
+      className: 'sidebar-title',
+    },
+    {
+      type: 'category',
+      label: 'Quick Start',
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'developers/quick-start/connecting-to-ethda',
+          label: 'Connecting to EthDA'
+        },
+        {
+          type: 'doc',
+          id: 'developers/quick-start/using-ethda-faucet',
+          label: 'Using EthDA Faucet'
+        },
+        // {
+        //   type: 'doc',
+        //   id: 'developers/quick-start/bridging-assets-to-ethda',
+        //   label: 'Bridging Assets to EthDA'
+        // }
+      ]
+    },
+    {
+      type: 'doc',
+      id: 'developers/upload-and-download-blobs',
+      label: 'Upload & Download Blobs'
+    },
+    // {
+    //   type: 'category',
+    //   label: 'How To',
+    //   collapsed: false,
+    //   items: [
+    //     // {
+    //     //   type: 'doc',
+    //     //   id: 'developers/how-to/using-ethda-as-altda',
+    //     //   label: 'L2 - Use EthDA as Alt-DA'
+    //     // },
+    //     {
+    //       type: 'doc',
+    //       id: 'developers/how-to/using-ethda-as-dstorage',
+    //       label: 'DApp - Use EthDA as dStorage'
+    //     }
+    //   ]
+    // },
     {
       type: 'html',
       value: 'RESOURCES',
@@ -96,50 +145,7 @@ const sidebars = {
       id: 'resources/official-links',
       label: 'Official Links'
     },
-    {
-      type: 'html',
-      value: 'DEVELOPERS',
-      className: 'sidebar-title',
-    },
-    {
-      type: 'category',
-      label: 'Quick Start',
-      collapsed: false,
-      items: [
-        {
-          type: 'doc',
-          id: 'developers/quick-start/connecting-to-ethda',
-          label: 'Connecting to EthDA'
-        },
-        {
-          type: 'doc',
-          id: 'developers/quick-start/using-ethda-faucet',
-          label: 'Using EthDA Faucet'
-        },
-        // {
-        //   type: 'doc',
-        //   id: 'developers/quick-start/bridging-assets-to-ethda',
-        //   label: 'Bridging Assets to EthDA'
-        // }
-      ]
-    },
-    {
-      type: 'category',
-      label: 'How To',
-      collapsed: false,
-      items: [
-        // {
-        //   type: 'doc',
-        //   id: 'developers/how-to/using-ethda-as-altda',
-        //   label: 'L2 - Use EthDA as Alt-DA'
-        // },
-        {
-          type: 'doc',
-          id: 'developers/how-to/using-ethda-as-dstorage',
-          label: 'DApp - Use EthDA as dStorage'
-        }
-      ]
-    },  
+   
    ]
 };
 
