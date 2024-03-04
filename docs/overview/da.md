@@ -11,7 +11,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 EthDA employs a decentralized DA network for Blob data storage. The DA network comprises of a set of PoS node based on Tendermint consensus, which run DAS to ensure Blob storage, and submit *DA attestations* to Ethereum L1 for L2's rollup contracts to check data availability and verify proofs. Node rewarding and slash are managed by a set of PoS contracts deployed on EthDA's sequencer network. 
 
 <div style={{textAlign: 'center'}}>
-  <img src={useBaseUrl('/img/overview/da/da.png')} style={{maxWidth: 800}} />
+  <img src={useBaseUrl('/img/overview/da/da.png')} style={{maxWidth: '800'}} />
 </div>
 
 ## Workflow

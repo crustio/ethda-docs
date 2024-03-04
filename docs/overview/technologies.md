@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ## Architecture
 
 <div style={{textAlign: 'center'}}>
-  <img src={useBaseUrl('/img/overview/technologies/architecture.png')} style={{maxWidth: 800}} />
+  <img src={useBaseUrl('/img/overview/technologies/architecture.png')} style={{maxWidth: '800'}} />
 </div>
 
 ## ZK Rollup
@@ -21,7 +21,7 @@ EthDA itself is an Ethereum ZK rollup powered by Polygon CDK, and derives securi
 EthDA is 100% compatible with Blob structure introduced by [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844). The *header* of a Blob is the the Kate commitment to the Blob, plus a bit of other miscallaneous data (slot, shard, length proof), and a signature from the proposer; the *body* of a Blob consists of the original data, the extended data, and the proofs. Below is the detailed structure of a Blob from [Vitalik's notes](https://hackmd.io/@vbuterin/sharding_proposal):
 
 <div style={{textAlign: 'center'}}>
-  <img src={useBaseUrl('/img/overview/technologies/blob.png')} style={{maxWidth: 600}} />
+  <img src={useBaseUrl('/img/overview/technologies/blob.png')} style={{maxWidth: '600'}} />
 </div>
 
 ## Yield Bearing

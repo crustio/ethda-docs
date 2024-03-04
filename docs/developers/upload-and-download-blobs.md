@@ -16,36 +16,104 @@ The ultimate goal of EthDA is to support the new type of blob-carrying transacti
 
 ## Upload Blobs
 
-FirsBlobs and their additional information should be placed in `data` field, and encoded in hexadecimal with UTF-8 character encoding.
+### Step 1: Encode data to blobs
 
-A typical blob uploading transaction have fields like below:
+Encode raw data to blobs and compute KZG commitments, KZG proofs and versioned hashes.
 
-```json
+### Step 2: Generate signature
+
+Use [eth_signTypedData_v4](https://docs.metamask.io/wallet/reference/eth_signTypedData_v4/) to generate an [EIP-712](https://eips.ethereum.org/EIPS/eip-712) signature for blob uploading authentication.
+
+The parameters to be signed looks like below:
+
+```JS
 {
-  from,
-  to,
-  gas,
-  value,
-  gasPrice,
-  maxPriorityFeePerGas,
-  maxFeePerGas,
-  data: {
-    blobs,
-    blobContentTypes,
-    blobVersionedHashes,
-    kzgCommitments,
-    kzgProofs
-  }
+  domain: {
+    // EthDA Devnet
+    chainId: 177,
+    name: "EthDA Blobs",
+    // A place-holder
+    verifyingContract: "0x0000000000000000000000000000000000000000",
+    version: "1",
+  },
+
+  message: {
+    // Whether EthDA need to generate DA attestations and submit to L1
+    daAttestationsToL1: true,
+    contentTypes: [..., ...],
+    versionedHashes: [..., ...],
+    kzgCommitments: [..., ...],
+    kzgProofs: [..., ...]
+  },
+  // This refers to the keys of the following types object.
+  primaryType: "Blobs",
+  types: {
+    // This refers to the domain the contract is hosted on.
+    EIP712Domain: [
+      { name: "name", type: "string" },
+      { name: "version", type: "string" },
+      { name: "chainId", type: "uint256" },
+      { name: "verifyingContract", type: "address" },
+    ],
+    Blobs: [
+      { name: "daAttestationsToL1", type: "boolean" },
+      { name: "contentTypes", type: "string[]" },
+      { name: "versionedHashes", type: "string[]" },
+      { name: "kzgCommitments", type: "string[]" },
+      { name: "kzgProofs", type: "string[]" }
+    ]
+  },
 }
 ```
 
-Please note:
+### Step 3: Upload blobs
 
-- `to`: Should be always set to a placeholder address `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE`
-- `value`: Should always be 0
-- `gas`: Including normal transaction fees and blob storage fees
-- `data` -> `blobs/blobVersionedHashes/kzgCommitments/kzgProofs`: Same to [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) blob carrying transactions
-- `data` -> `blobContentTypes`: Specify mime type of the Blobs. Useful for users storing application data.
+Blobs could then be uploaded for later retrieval, with the signature generated above. For this purpose, a new RPC interface is introduced.
+
+**ethda_uploadBlobs**, with parameters:
+- `signature`: Signature generated in step above
+- `blobs`: Blobs data
+- `daAttestationsToL1`
+- `contentTypes`
+- `versionedHashes`
+- `kzgCommitments`
+- `kzgProofs`
+
+
+:::warning
+Blobs are only stored for a very short of time (like 1 hour). 
+:::
+
+### Step 4: Query blob storage fee
+
+Similar to [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), we introduce blob gas as a new type of gas. It is independent of normal gas and follows its own targeting rule, similar to [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Users could use RPC interface below to query the real-time fee per blob:
+
+**ethda_estimatePerBlobFee**
+
+### Step 5: Send transaction
+
+Users could now sign and send a regular transaction to EthDA for blobs storage:
+
+**to**: Should be a place-holder address *0x0000000000000000000000000000000000000000*
+
+**value**: The blobs storage fee. Should be *PER_BLOB_FEE* * *BLOB_COUNT*
+
+**data**: Should be a json encoded in hexadecimal with UTF-8 character encoding
+
+```JS
+{
+  daAttestationsToL1,
+  contentTypes,
+  versionedHashes,
+  kzgCommitments,
+  kzgProofs
+}
+```
+
+### Step 6: Query transaction status
+
+After a *blob transaction* described above is submitted, users could then monitor transaction status. If transaction is successfully minted, it means specified blobs are successfully stored by EthDA's DAS network.
+
 
 ## Download Blobs
 
