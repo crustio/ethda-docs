@@ -20,7 +20,7 @@ The ultimate goal of EthDA is to support the new type of blob-carrying transacti
 
 Encode raw data to blobs and compute KZG commitments, KZG proofs and versioned hashes.
 
-### Step 2: Generate signature
+### Step 2: Sign blobs
 
 Use [eth_signTypedData_v4](https://docs.metamask.io/wallet/reference/eth_signTypedData_v4/) to generate an [EIP-712](https://eips.ethereum.org/EIPS/eip-712) signature for blob uploading authentication.
 
@@ -40,6 +40,7 @@ The parameters to be signed looks like below:
   message: {
     // Whether EthDA need to generate DA attestations and submit to L1
     daAttestationsToL1: true,
+    blobs: [..., ...],
     contentTypes: [..., ...],
     versionedHashes: [..., ...],
     kzgCommitments: [..., ...],
@@ -57,6 +58,7 @@ The parameters to be signed looks like below:
     ],
     Blobs: [
       { name: "daAttestationsToL1", type: "boolean" },
+      { name: "blobs", type: "string[]" },
       { name: "contentTypes", type: "string[]" },
       { name: "versionedHashes", type: "string[]" },
       { name: "kzgCommitments", type: "string[]" },
@@ -90,7 +92,7 @@ Similar to [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), we introduce blo
 
 **ethda_estimatePerBlobFee**
 
-### Step 5: Send transaction
+### Step 5: Send blob transaction
 
 Users could now sign and send a regular transaction to EthDA for blobs storage:
 
