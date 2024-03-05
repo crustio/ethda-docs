@@ -4,6 +4,11 @@ title: ''
 hide_table_of_contents: false
 ---
 
+:::warning
+Please not that this is for the upcoming devnet-2, and does **NOT** work with current devnet-1 yet. We are actively working to deliver it ASAP.
+:::
+
+
 ## Background
 
 Besides the new blob-carrying transactions introduced by [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), there are a few different types of *legacy* transactions which are widely supported by community tools like MetaMask:
