@@ -5,7 +5,7 @@ hide_table_of_contents: false
 ---
 
 :::warning
-Please not that this is for the upcoming devnet-2, and does **NOT** work with current devnet-1 yet. We are actively working to deliver it ASAP.
+This is for the upcoming devnet-2, and does **NOT** work with current devnet-1 yet. We are actively working to deliver it ASAP.
 :::
 
 To submit data to EthDA, users submit blob transactions similar to blob-carrying-transactions introduced by EIP-4844. EthDA blob transactions contain two component, a standard ethereum regular transaction with blob commitments and one or more blobs of data. 
@@ -17,11 +17,13 @@ To submit data to EthDA, users submit blob transactions similar to blob-carrying
 
 Encode raw data to blobs and compute KZG commitments, KZG proofs and versioned hashes.
 
+> For blob encoding implementation in node.js, please refer to https://github.com/crustio/ethda-blobs/blob/main/src/utils/blobs.ts.
+
 ### Step 2: Query blob storage fee
 
-Users could use RPC interface below to query the real-time fee per blob byte:
+Users could use the same execution api added by EIP-4844 to query the base fee per blob gas in wei:
 
-**ethda_estimatePerBlobByteFee**
+**eth_blobBaseFee**
 
 ### Step 3: Construct and sign regular transactions
 
@@ -33,18 +35,19 @@ Blobs storage fee
 
 #### `data`
 
+
 ```JS
 {
-  originator: "...",
-  description: "...",
-  content_type: "...",
-  extra: "...",
+  originator,
+  description,
+  content_type,
+  extra,
   blobs: [
     {
-      content_type: "...",
-      versioned_hash: "...",  // required
-      kzg_commitment: "...", // required
-      kzg_proof: "..." // required
+      content_type,
+      versioned_hash,  // required
+      kzg_commitment, // required
+      kzg_proof // required
     },
     {...}
     ...
@@ -60,7 +63,10 @@ Blobs storage fee
   value,
   data,
   signature,
-  blobs: [..., ...]
+  blobs,
+  blobVersionedHashes,
+  kzgCommitments,
+  kzgProofs
 }
 ```
 

@@ -19,10 +19,10 @@ EthDA employs a decentralized DA network for Blob data storage. The DA network c
 A typical workflow of Alt-DA scenario is like below:
 
 - L2 signs & sends tx with encoded Blobs and *versioned_hashes / kzg_commitments / kzg_proofs* to EthDA Sequencer, and pays Blob storage fees
-- EthDA Sequencer validates and sends Blobs to EthDA DA Network
-- EthDA DA Network stores Blobs, performing DAS, and submits *DA Attestations* to DA Contracts on L1
+- EthDA Sequencer validates and sends Blobs to EthDA DAS Network
+- EthDA DAS Network stores Blobs, performing DAS, and submits *DA Attestations* to DA Contracts on L1
 - EthDA tx flows through EthDA CDK components like zkProver/Aggregator, and is rolluped to L1 with ZK Proofs for settlement
-- L2 downloads Blobs from EthDA DA Network on demand, and sends fraud/validity proofs to its rollup contracts for verification. L2 rollup contracts verify proofs and check *DA attestations* from EthDA DA Contracts on L1.
+- L2 downloads Blobs from EthDA DAS Network on demand, and sends fraud/validity proofs to its rollup contracts for verification. L2 rollup contracts verify proofs and check *DA attestations* from EthDA DA Contracts on L1.
 
 
 <!-- ## Overview

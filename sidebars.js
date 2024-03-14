@@ -47,7 +47,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'overview/da',
-      label: 'DA Network'
+      label: 'DAS Network'
     },
     {
       type: 'html',
@@ -80,6 +80,11 @@ const sidebars = {
       type: 'doc',
       id: 'developers/upload-and-download-blobs',
       label: 'Upload & Download Blobs'
+    },
+    {
+      type: 'doc',
+      id: 'developers/integrate-with-zkblob',
+      label: 'Integrate with zkBlob'
     },
     // {
     //   type: 'category',
