@@ -7,7 +7,7 @@ hide_table_of_contents: false
 ## Testnet
 
 
-## Devnet
+<!-- ## Devnet
 
 - CDKValidium: [0x6af6A2F1ed424097b29609CC0dD12e4812155295](https://sepolia.etherscan.io/address/0x6af6A2F1ed424097b29609CC0dD12e4812155295)
 
@@ -15,4 +15,4 @@ hide_table_of_contents: false
 
 - PolygonZkEVMGlobalExitRoot: [0x54af4E46E26feAb73f9089583fF4D79a31C243eC](https://sepolia.etherscan.io/address/0x54af4E46E26feAb73f9089583fF4D79a31C243eC)
 
-- CDKDataCommittee: [0xf35Cd7211737792D14BC6D2A992714C71C21C6D3](https://sepolia.etherscan.io/address/0xf35Cd7211737792D14BC6D2A992714C71C21C6D3)
+- CDKDataCommittee: [0xf35Cd7211737792D14BC6D2A992714C71C21C6D3](https://sepolia.etherscan.io/address/0xf35Cd7211737792D14BC6D2A992714C71C21C6D3) -->
