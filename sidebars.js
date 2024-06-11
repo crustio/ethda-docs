@@ -64,16 +64,16 @@ const sidebars = {
           id: 'developers/quick-start/connecting-to-ethda',
           label: 'Connecting to EthDA'
         },
-        {
-          type: 'doc',
-          id: 'developers/quick-start/using-ethda-faucet',
-          label: 'Using EthDA Faucet'
-        },
         // {
         //   type: 'doc',
-        //   id: 'developers/quick-start/bridging-assets-to-ethda',
-        //   label: 'Bridging Assets to EthDA'
-        // }
+        //   id: 'developers/quick-start/using-ethda-faucet',
+        //   label: 'Using EthDA Faucet'
+        // },
+        {
+          type: 'doc',
+          id: 'developers/quick-start/bridging-assets-to-ethda',
+          label: 'Bridging Assets to EthDA'
+        }
       ]
     },
     {

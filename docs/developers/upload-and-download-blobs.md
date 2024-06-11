@@ -4,9 +4,6 @@ title: ''
 hide_table_of_contents: false
 ---
 
-:::warning
-This is for the upcoming devnet-2, and does **NOT** work with current devnet-1 yet. We are actively working to deliver it ASAP.
-:::
 
 To submit data to EthDA, users submit blob transactions similar to blob-carrying-transactions introduced by EIP-4844. EthDA blob transactions contain two component, a standard ethereum regular transaction with blob commitments and one or more blobs of data. 
 

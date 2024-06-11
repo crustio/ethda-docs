@@ -4,10 +4,6 @@ title: ''
 hide_table_of_contents: false
 ---
 
-:::warning
-This is for the upcoming devnet-2, and does **NOT** work with current devnet-1 yet. We are actively working to deliver it ASAP.
-:::
-
 Rollups can use zkBlob for DA by posting their data to EthDA and then proving that it was posted on Ethereum. This turtorial will define a demo rollup which will outline a very simple zkBlob rollup to illustrate at a high level what this could look like.
 
 ## Define a rollup
