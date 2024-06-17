@@ -6,6 +6,15 @@ hide_table_of_contents: false
 
 ## Testnet
 
+- RollUpAddress: [0xd1F4005D4Fe4073e5C7B1FB3517508374A3D6E80](https://sepolia.etherscan.io/address/0xd1F4005D4Fe4073e5C7B1FB3517508374A3D6E80)
+
+- PolygonZkEVMBridge: [0x8cB4566C83c467dea6BC4Aa80C60e114185ACEcf](https://sepolia.etherscan.io/address/0x8cB4566C83c467dea6BC4Aa80C60e114185ACEcf)
+
+- PolygonZkEVMGlobalExitRoot: [0x3d4a59cfAec6d1CDb58fC675C25F8d7E82662DdB](https://sepolia.etherscan.io/address/0x3d4a59cfAec6d1CDb58fC675C25F8d7E82662DdB)
+
+- DASAddress: [0xD0d387145B497FF1992DF7b35DE4594991adf00B](https://sepolia.etherscan.io/address/0xD0d387145B497FF1992DF7b35DE4594991adf00B)
+
+- ZKBlobAddress: [0xdB799CA647e7eADdD43659c1BcbAB2A42C3CfB08](https://sepolia.etherscan.io/address/0xdB799CA647e7eADdD43659c1BcbAB2A42C3CfB08)
 
 <!-- ## Devnet
 
