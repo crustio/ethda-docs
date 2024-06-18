@@ -25,7 +25,7 @@ Users could use the same execution api added by EIP-4844 to query the base fee p
 ### Step 3: Construct and sign regular transactions
 
 #### `to`
-Should be a designated contract address (given later)
+Should be the [DASAddress](https://docs.ethda.io/resources/ethda-contracts)
 
 #### `value`
 Blobs storage fee
