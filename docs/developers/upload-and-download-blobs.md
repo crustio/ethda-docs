@@ -14,7 +14,7 @@ To submit data to EthDA, users submit blob transactions similar to blob-carrying
 
 Encode raw data to blobs and compute KZG commitments, KZG proofs and versioned hashes.
 
-> For blob encoding implementation in node.js, please refer to https://github.com/crustio/ethda-blobs/blob/main/src/utils/blobs.ts.
+For a Node.js implementation, please refer to [ethda-blobs](https://github.com/crustio/ethda-blobs/blob/main/src/utils/blobs.ts).
 
 ### Step 2: Query blob storage fee
 
@@ -30,14 +30,14 @@ Should be the [DASAddress](../resources/ethda-contracts) contract.
 #### `value`
 Blobs storage fee. The calculation formula is:
 
-$$value = (Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * maxFeePerBlobGas$$
+$$value = (Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * blobBaseFee$$
 
 where:
 - $Size_{blobs}$ means blob count carried by the blob transanction
-- $Params_{BlobTxBlobGasPerBlob}$ is the `BlobTxBlobGasPerBlob` param value of EthDA testnet, which is 131072
-- `maxFeePerBlobGas` could be queried via `eth_blobBaseFee`
+- $Params_{BlobTxBlobGasPerBlob}$ is the `BlobTxBlobGasPerBlob` param value of geth, which is 131072
+- `blobBaseFee` could be queried via `eth_blobBaseFee`
 
-For a golang implementation, you could check [blob-utils](https://github.com/crustio/blob-utils/blob/main/blob.go).
+For a golang implementation, please refer to [blob-utils](https://github.com/crustio/blob-utils/blob/main/blob.go).
 
 <!-- $$Length_{blobs} * Params_{BlobTxBlobGasPerBlob} * BlobBaseFee$$ -->
 
