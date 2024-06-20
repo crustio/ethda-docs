@@ -18,17 +18,28 @@ Encode raw data to blobs and compute KZG commitments, KZG proofs and versioned h
 
 ### Step 2: Query blob storage fee
 
-Users could use the same execution api added by EIP-4844 to query the base fee per blob gas in wei:
+Users could use the same execution api added by EIP-4844 to query the base fee per blob in wei, represented as a hexadecimal:
 
 **eth_blobBaseFee**
 
 ### Step 3: Construct and sign regular transactions
 
 #### `to`
-Should be the [DASAddress](https://docs.ethda.io/resources/ethda-contracts)
+Should be the [DASAddress](../resources/ethda-contracts) contract.
 
 #### `value`
-Blobs storage fee
+Blobs storage fee. The calculation formula is:
+
+$$value = (Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * maxFeePerBlobGas$$
+
+where:
+- $Size_{blobs}$ means blob count carried by the blob transanction
+- $Params_{BlobTxBlobGasPerBlob}$ is the `BlobTxBlobGasPerBlob` param value of EthDA testnet, which is 131072
+- `maxFeePerBlobGas` could be queried via `eth_blobBaseFee`
+
+For a golang implementation, you could check [blob-utils](https://github.com/crustio/blob-utils/blob/main/blob.go).
+
+<!-- $$Length_{blobs} * Params_{BlobTxBlobGasPerBlob} * BlobBaseFee$$ -->
 
 #### `data`
 
