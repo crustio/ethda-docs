@@ -113,28 +113,28 @@ const sidebars = {
       id: 'resources/ethda-contracts',
       label: 'EthDA Contracts'
     },
-    {
-      type: 'category',
-      label: 'Network Configuration',
-      collapsed: false,
-      items: [
-        // {
-        //   type: 'doc',
-        //   id: 'resources/network-configuration/install-metamask',
-        //   label: 'Install MetaMask'
-        // },
-        {
-          type: 'doc',
-          id: 'resources/network-configuration/install-coinbase-wallet',
-          label: 'Install Coinbase Wallet'
-        },
-        {
-          type: 'doc',
-          id: 'resources/network-configuration/add-ethda-network',
-          label: 'Add EthDA Network'
-        }
-      ]
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Network Configuration',
+    //   collapsed: false,
+    //   items: [
+    //     // {
+    //     //   type: 'doc',
+    //     //   id: 'resources/network-configuration/install-metamask',
+    //     //   label: 'Install MetaMask'
+    //     // },
+    //     {
+    //       type: 'doc',
+    //       id: 'resources/network-configuration/install-coinbase-wallet',
+    //       label: 'Install Coinbase Wallet'
+    //     },
+    //     {
+    //       type: 'doc',
+    //       id: 'resources/network-configuration/add-ethda-network',
+    //       label: 'Add EthDA Network'
+    //     }
+    //   ]
+    // },
     {
       type: 'doc',
       id: 'resources/eips',
