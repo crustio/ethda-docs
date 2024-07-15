@@ -30,13 +30,14 @@ Should be the [DASAddress](../resources/ethda-contracts) contract.
 #### `value`
 Blobs storage fee. The calculation formula is:
 
-$$value = (Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * blobBaseFee + priorityFee$$
+$$value = (Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * blobBaseFee * multiplier$$
 
 where:
 - $(Size_{blobs} * Params_{BlobTxBlobGasPerBlob}) * blobBaseFee$ is the base fee, and $priorityFee$ is adjusted by the market, and user could set it to, like 10% of the base fee
 - $Size_{blobs}$ means blob count carried by the blob transanction
 - $Params_{BlobTxBlobGasPerBlob}$ is the `BlobTxBlobGasPerBlob` param value of Geth, which is 131072
 - $blobBaseFee$ could be queried via `eth_blobBaseFee`
+- $multiplier$ is usually set to 1. To ensure successful transactions during network fluctuations, it can be adjusted as needed.
 
 For a golang implementation, please refer to [blob-utils](https://github.com/crustio/blob-utils/blob/main/blob.go).
 
