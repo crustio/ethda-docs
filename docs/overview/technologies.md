@@ -12,9 +12,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <img src={useBaseUrl('/img/overview/technologies/architecture.png')} style={{maxWidth: '800'}} />
 </div>
 
-## ZK Rollup
+## ZK Validium
 
-EthDA itself is an Ethereum ZK rollup powered by Polygon CDK, and derives security from Ethereum consensus.
+EthDA itself is an Ethereum ZK L2 powered by Polygon CDK, and derives security from Ethereum consensus.
 
 ## Blobs
 

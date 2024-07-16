@@ -14,5 +14,5 @@ The long term and canonical solution to this DA dilemma is Danksharding, and the
 However, since EIP-4844 took time to implement and deploy (not to mention the full Danksharding), it's observed that some rollups are opting for Alt-DA solutions like Celestia, Avail, etc. Both Celestia and Avail are separate blockchains built on top of different technical stacks and providing their own Data Availability interface.
 
 EthDA, as a contrast, is an Ethereum native Alt-DA solution, in that:
-- EthDA itself is an Ethereum ZK rollup, and is administered by a collection of smart contracts deployed on Ethereum L1
+- EthDA itself is an Ethereum ZK L2, and is administered by a collection of smart contracts deployed on Ethereum L1
 - EthDA provides a seamless Blob-based DA interface to Alt-DA chain users, allowing their sequencers to pay storage fees with native $ETH
