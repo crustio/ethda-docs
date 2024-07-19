@@ -6,15 +6,15 @@ hide_table_of_contents: false
 
 ## Testnet
 
-- RollUpAddress: [0xd1F4005D4Fe4073e5C7B1FB3517508374A3D6E80](https://sepolia.etherscan.io/address/0xd1F4005D4Fe4073e5C7B1FB3517508374A3D6E80)
+- RollUpAddress: [0xb2A39a6e7f10C7a57d0f490FF659Cd3805e96512](https://sepolia.etherscan.io/address/0xb2A39a6e7f10C7a57d0f490FF659Cd3805e96512)
 
-- PolygonZkEVMBridge: [0x8cB4566C83c467dea6BC4Aa80C60e114185ACEcf](https://sepolia.etherscan.io/address/0x8cB4566C83c467dea6BC4Aa80C60e114185ACEcf)
+- PolygonZkEVMBridge: [0xd8FE69F8A5937d9830597f6AC9aB165c1E762853](https://sepolia.etherscan.io/address/0xd8FE69F8A5937d9830597f6AC9aB165c1E762853)
 
-- PolygonZkEVMGlobalExitRoot: [0x3d4a59cfAec6d1CDb58fC675C25F8d7E82662DdB](https://sepolia.etherscan.io/address/0x3d4a59cfAec6d1CDb58fC675C25F8d7E82662DdB)
+- PolygonZkEVMGlobalExitRoot: [0x18D093D6f8c9cf3431F3C7445A75AD9CAeC5dEA4](https://sepolia.etherscan.io/address/0x18D093D6f8c9cf3431F3C7445A75AD9CAeC5dEA4)
 
-- DASAddress: [0xD0d387145B497FF1992DF7b35DE4594991adf00B](https://sepolia.etherscan.io/address/0xD0d387145B497FF1992DF7b35DE4594991adf00B)
+- DASAddress: [0xCC0BC5927905ba756659A0c4e90A6dcD626416ee](https://sepolia.etherscan.io/address/0xCC0BC5927905ba756659A0c4e90A6dcD626416ee)
 
-- ZKBlobAddress: [0xdB799CA647e7eADdD43659c1BcbAB2A42C3CfB08](https://sepolia.etherscan.io/address/0xdB799CA647e7eADdD43659c1BcbAB2A42C3CfB08)
+- ZKBlobAddress: [0x306c92cb2127Dfbc588373c6aF466147b9b721Fc](https://sepolia.etherscan.io/address/0x306c92cb2127Dfbc588373c6aF466147b9b721Fc)
 
 <!-- ## Devnet
 
