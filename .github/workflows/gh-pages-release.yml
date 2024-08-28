@@ -4,9 +4,18 @@ on:
   push:
     branches:
       - main
-      
+
 jobs:
   build:
+    strategy:
+      matrix:
+        domain: ["ethda.io", "ethda.app"]
+        include:
+          - domain: "ethda.io"
+            dk_key: DK_ETHDA_IO
+          - domain: "ethda.app"
+            dk_key: DK_ETHDA_APP
+
     if: github.repository == 'crustio/ethda-docs'
     runs-on: ubuntu-latest
     steps:
@@ -19,18 +28,17 @@ jobs:
           node-version: v18.18.0
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install
+        run: yarn install --frozen-lockfile
 
       - name: Build for production
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: build
+        run: yarn build
+        env:
+          SITE_URL: "https://docs.${{ matrix.domain }}"
 
       - name: Deploy Gh-Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets[matrix.dk_key] }}
           publish_dir: ./build
-          cname: docs.ethda.io
+          destination_dir: crust-pages/docs.${{matrix.domain}}
+          cname: "docs.${{matrix.domain}}"
