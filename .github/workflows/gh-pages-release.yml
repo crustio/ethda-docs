@@ -40,5 +40,5 @@ jobs:
         with:
           deploy_key: ${{ secrets[matrix.dk_key] }}
           publish_dir: ./build
-          destination_dir: crust-pages/docs.${{matrix.domain}}
+          external_repository: crust-pages/docs.${{matrix.domain}}
           cname: "docs.${{matrix.domain}}"
